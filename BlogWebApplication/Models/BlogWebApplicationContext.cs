@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using BlogWebApplication.Models.Entities;
 
 namespace BlogWebApplication.Models
 {
@@ -19,6 +20,10 @@ namespace BlogWebApplication.Models
         {
         }
 
-        public System.Data.Entity.DbSet<BlogWebApplication.Models.Entities.User> Users { get; set; }
+        public DbSet<Article> Articles { get; set; }
+        public DbSet<Comment> Comments { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<User> Users { get; set; }
     }
 }
