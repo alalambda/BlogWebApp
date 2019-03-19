@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Web;
 
 namespace BlogWebApplication.Models.Entities
 {
-    public class Permissions
+    public class Role
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
+        public virtual ICollection<Permission> Permissions { get; set; }
     }
 }

@@ -8,14 +8,14 @@ namespace BlogWebApplication.Models.Entities
 {
     public class Article
     {
-        public int Id { get; set; }
+        public int ID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public byte[] Image { get; set; }
         public int Rank { get; set; }
-        public Users Author { get; set; }
+        public virtual User Author { get; set; }
         public DateTime DateTime { get; set; }
         public DateTime LastCommentTime { get; set; }
-        public IEnumerable<Comment> Comments { get; set; }
+        public virtual ICollection<Comment> Comments { get; set; }
     }
 }
