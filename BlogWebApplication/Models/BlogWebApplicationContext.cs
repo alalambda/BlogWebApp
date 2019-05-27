@@ -24,6 +24,11 @@ namespace BlogWebApplication.Models
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Permission> Permissions { get; set; }
         public DbSet<Role> Roles { get; set; }
-        public DbSet<User> Users { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
+
+        public static BlogWebApplicationContext Create()
+        {
+            return new BlogWebApplicationContext();
+        }
     }
 }

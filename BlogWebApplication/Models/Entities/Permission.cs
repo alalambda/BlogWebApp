@@ -1,8 +1,15 @@
-﻿namespace BlogWebApplication.Models.Entities
+﻿using System;
+
+namespace BlogWebApplication.Models.Entities
 {
     public class Permission
     {
-        public int ID { get; set; }
+        public Guid Id { get; set; }
         public string Name { get; set; }
+
+        public Permission()
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }
